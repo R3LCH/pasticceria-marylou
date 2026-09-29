@@ -1,0 +1,155 @@
+{
+  "meta": {
+    "title": "Pasticceria Mary Lou — Scalea",
+    "description": "Pasticceria Mary Lou, Via Tommaso Campanella 58, Scalea. Pastries, fresh production, and cakes."
+  },
+  "nav": {
+    "aria": "Main navigation",
+    "home": "Home",
+    "chiSiamo": "About",
+    "dolci": "Pastries",
+    "produzioneFresca": "Fresh production",
+    "torte": "Cakes",
+    "gallery": "Gallery",
+    "doveSiamo": "Find us",
+    "contatti": "Contact",
+    "orari": "Hours",
+    "menu": "Menu",
+    "close": "Close"
+  },
+  "language": {
+    "label": "Language",
+    "it": "Italiano",
+    "en": "English",
+    "switchTo": "Switch to {{language}}"
+  },
+  "business": {
+    "name": "Pasticceria Mary Lou",
+    "address": "Via Tommaso Campanella, 58",
+    "city": "87029 Scalea CS",
+    "country": "Italy",
+    "addressFull": "Via Tommaso Campanella, 58, 87029 Scalea CS, Italy",
+    "phone": "0985 272108",
+    "phoneHref": "tel:0985272108",
+    "instagram": "@pasticceriamarylou",
+    "instagramUrl": "https://www.instagram.com/pasticceriamarylou/",
+    "facebook": "Pasticceria Mary Lou Scalea",
+    "facebookUrl": "https://www.facebook.com/pasticceriamarylouscalea/",
+    "mapsUrl": "https://maps.app.goo.gl/JzZekZSvMkiQJ5xK9",
+    "mapsLabel": "Open in Google Maps",
+    "whatsapp": "WhatsApp",
+    "whatsappHref": "https://wa.me/390985272108",
+    "email": "marylouscalea@gmail.com",
+    "emailHref": "mailto:marylouscalea@gmail.com"
+  },
+  "hero": {
+    "eyebrow": "Scalea, Calabria",
+    "title": "Pasticceria Mary Lou",
+    "subtitle": "Pastries, fresh production, and cakes on Via Tommaso Campanella.",
+    "cta": {
+      "call": "Call us",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "chiSiamo": {
+    "id": "chi-siamo",
+    "eyebrow": "The pastry shop",
+    "title": "About",
+    "lead": "Pasticceria Mary Lou is in Scalea, at Via Tommaso Campanella 58.",
+    "description": "A pastry shop, bar, and café in Scalea. Breakfast, pastries, and cakes are prepared in the workshop on Via Tommaso Campanella 58."
+  },
+  "dolci": {
+    "id": "dolci",
+    "title": "Our Pastries",
+    "subtitle": "Cornetti, pastries, and sweets from the Scalea workshop.",
+    "lead": "The pastries of the shop.",
+    "items": {
+      "cornetti": "Cornetti",
+      "pastries": "Pastries",
+      "dolci": "Sweets"
+    }
+  },
+  "produzioneFresca": {
+    "id": "produzione-fresca",
+    "title": "Fresh production",
+    "lead": "Fresh production from the workshop.",
+    "description": "Cornetti, pastries, and cakes prepared fresh each day in the Scalea workshop.",
+    "items": {
+      "cornetti": "Cornetti",
+      "dolci": "Pastries",
+      "pasticceria": "Pasticceria"
+    }
+  },
+  "torte": {
+    "id": "torte",
+    "title": "Cakes to Order",
+    "description": "Cakes made to order in the Scalea workshop, for a birthday, a celebration, or a moment worth marking.",
+    "lead": "The cakes of the shop.",
+    "occasions": [
+      "Birthdays",
+      "Celebrations",
+      "Anniversaries",
+      "Special events"
+    ],
+    "cta": "Request a Cake",
+    "whatsappMessage": "Hi! I would like to order a cake for...",
+    "imageAlt": "Cake {{index}}"
+  },
+  "gallery": {
+    "id": "gallery",
+    "title": "Gallery",
+    "lead": "Photographs from the shop.",
+    "close": "Close",
+    "previous": "Previous photo",
+    "next": "Next photo",
+    "filters": "Filter photos",
+    "photo": "{{category}} {{n}}",
+    "categories": {
+      "all": "All",
+      "dolci": "Pastries",
+      "torte": "Cakes",
+      "colazione": "Breakfast",
+      "pasticceria": "Pasticceria"
+    }
+  },
+  "doveSiamo": {
+    "id": "dove-siamo",
+    "title": "Find us",
+    "lead": "You will find us at Via Tommaso Campanella 58, in Scalea.",
+    "directions": "Directions",
+    "cta": "Get directions"
+  },
+  "contatti": {
+    "id": "contatti",
+    "title": "Contact",
+    "lead": "Phone and social profiles for the shop.",
+    "phoneLabel": "Phone",
+    "instagramLabel": "Instagram",
+    "facebookLabel": "Facebook",
+    "call": "Call",
+    "phone": {
+      "label": "Phone"
+    },
+    "email": {
+      "label": "Email"
+    },
+    "whatsapp": {
+      "label": "WhatsApp"
+    }
+  },
+  "orari": {
+    "id": "orari",
+    "title": "Opening Hours",
+    "lead": "Opening hours.",
+    "tbd": "Opening hours are available on Google Maps",
+    "maps": "Open in Google Maps",
+    "note": "Hours should be manually verified and updated. Do not publish unconfirmed hours."
+  },
+  "footer": {
+    "title": "Pasticceria Mary Lou",
+    "rights": "Pasticceria Mary Lou",
+    "address": "Via Tommaso Campanella, 58, 87029 Scalea CS, Italy",
+    "follow": "Follow us",
+    "copyright": "© {{year}} Pasticceria Mary Lou. All rights reserved."
+  }
+}

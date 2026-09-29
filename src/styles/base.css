@@ -1,0 +1,89 @@
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+    overflow-x: clip;
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-cream-50);
+    color: var(--color-text-dark);
+    font-family: var(--font-sans);
+    font-size: var(--text-16);
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0;
+    color: inherit;
+    font-family: var(--font-serif);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  h1 {
+    font-size: var(--text-48);
+  }
+
+  h2 {
+    font-size: var(--text-32);
+  }
+
+  h3 {
+    font-size: var(--text-24);
+  }
+
+  h4 {
+    font-size: var(--text-18);
+    letter-spacing: 0;
+    line-height: 1.3;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: var(--text-64);
+    }
+
+    h2 {
+      font-size: var(--text-48);
+    }
+
+    h3 {
+      font-size: var(--text-32);
+    }
+  }
+}
+
+@layer components {
+  .section-padding {
+    padding-top: var(--space-12);
+    padding-bottom: var(--space-12);
+  }
+
+  .container-width {
+    width: 100%;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-padding {
+      padding-top: var(--space-16);
+      padding-bottom: var(--space-16);
+    }
+  }
+}

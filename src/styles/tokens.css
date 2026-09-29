@@ -1,0 +1,38 @@
+:root {
+  --color-cream-50: #fbf6ef;
+  --color-cream-100: #f3ebe0;
+  --color-espresso: #3c2415;
+  --color-terracotta: #c46a4a;
+  --color-text-dark: #3c2415;
+  --color-text-muted: #8a7364;
+  --color-white: #ffffff;
+  --color-night: #241812;
+  --color-border: rgba(60, 36, 21, 0.08);
+
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+
+  --text-14: 14px;
+  --text-16: 16px;
+  --text-18: 18px;
+  --text-24: 24px;
+  --text-32: 32px;
+  --text-48: 48px;
+  --text-64: 64px;
+
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-8: 64px;
+  --space-10: 80px;
+  --space-12: 96px;
+  --space-16: 128px;
+
+  --radius-8: 8px;
+  --radius-12: 12px;
+
+  --shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.04);
+}

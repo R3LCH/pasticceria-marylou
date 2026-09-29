@@ -1,0 +1,155 @@
+{
+  "meta": {
+    "title": "Pasticceria Mary Lou — Scalea",
+    "description": "Pasticceria Mary Lou, Via Tommaso Campanella 58, Scalea. Dolci, produzione fresca e torte."
+  },
+  "nav": {
+    "aria": "Navigazione principale",
+    "home": "Home",
+    "chiSiamo": "Chi siamo",
+    "dolci": "Dolci",
+    "produzioneFresca": "Produzione fresca",
+    "torte": "Torte",
+    "gallery": "Galleria",
+    "doveSiamo": "Dove siamo",
+    "contatti": "Contatti",
+    "orari": "Orari",
+    "menu": "Menu",
+    "close": "Chiudi"
+  },
+  "language": {
+    "label": "Lingua",
+    "it": "Italiano",
+    "en": "English",
+    "switchTo": "Passa a {{language}}"
+  },
+  "business": {
+    "name": "Pasticceria Mary Lou",
+    "address": "Via Tommaso Campanella, 58",
+    "city": "87029 Scalea CS",
+    "country": "Italia",
+    "addressFull": "Via Tommaso Campanella, 58, 87029 Scalea CS, Italia",
+    "phone": "0985 272108",
+    "phoneHref": "tel:0985272108",
+    "instagram": "@pasticceriamarylou",
+    "instagramUrl": "https://www.instagram.com/pasticceriamarylou/",
+    "facebook": "Pasticceria Mary Lou Scalea",
+    "facebookUrl": "https://www.facebook.com/pasticceriamarylouscalea/",
+    "mapsUrl": "https://maps.app.goo.gl/JzZekZSvMkiQJ5xK9",
+    "mapsLabel": "Apri in Google Maps",
+    "whatsapp": "WhatsApp",
+    "whatsappHref": "https://wa.me/390985272108",
+    "email": "marylouscalea@gmail.com",
+    "emailHref": "mailto:marylouscalea@gmail.com"
+  },
+  "hero": {
+    "eyebrow": "Scalea, Calabria",
+    "title": "Pasticceria Mary Lou",
+    "subtitle": "Dolci, produzione fresca e torte in Via Tommaso Campanella.",
+    "cta": {
+      "call": "Chiamaci",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "chiSiamo": {
+    "id": "chi-siamo",
+    "eyebrow": "La pasticceria",
+    "title": "Chi siamo",
+    "lead": "Pasticceria Mary Lou è a Scalea, in Via Tommaso Campanella 58.",
+    "description": "Pasticceria, bar e caffetteria a Scalea. La colazione, i dolci e le torte si preparano in laboratorio, in Via Tommaso Campanella 58."
+  },
+  "dolci": {
+    "id": "dolci",
+    "title": "I Nostri Dolci",
+    "subtitle": "Cornetti, pasticceria e dolci preparati nel laboratorio di Scalea.",
+    "lead": "I dolci della pasticceria.",
+    "items": {
+      "cornetti": "Cornetti",
+      "pastries": "Pasticceria",
+      "dolci": "Dolci"
+    }
+  },
+  "produzioneFresca": {
+    "id": "produzione-fresca",
+    "title": "Produzione fresca",
+    "lead": "La produzione fresca del laboratorio.",
+    "description": "Cornetti, dolci e pasticceria preparati ogni giorno nel laboratorio di Scalea.",
+    "items": {
+      "cornetti": "Cornetti",
+      "dolci": "Dolci",
+      "pasticceria": "Pasticceria"
+    }
+  },
+  "torte": {
+    "id": "torte",
+    "title": "Torte su Ordinazione",
+    "description": "Torte preparate su ordinazione nel laboratorio di Scalea, per un compleanno, una festa o un momento da festeggiare.",
+    "lead": "Le torte della pasticceria.",
+    "occasions": [
+      "Compleanni",
+      "Feste",
+      "Ricorrenze",
+      "Eventi speciali"
+    ],
+    "cta": "Richiedi una Torta",
+    "whatsappMessage": "Ciao! Vorrei ordinare una torta per...",
+    "imageAlt": "Torta {{index}}"
+  },
+  "gallery": {
+    "id": "gallery",
+    "title": "Galleria",
+    "lead": "Foto dalla pasticceria.",
+    "close": "Chiudi",
+    "previous": "Foto precedente",
+    "next": "Foto successiva",
+    "filters": "Filtra le foto",
+    "photo": "{{category}} {{n}}",
+    "categories": {
+      "all": "Tutti",
+      "dolci": "Dolci",
+      "torte": "Torte",
+      "colazione": "Colazione",
+      "pasticceria": "Pasticceria"
+    }
+  },
+  "doveSiamo": {
+    "id": "dove-siamo",
+    "title": "Dove siamo",
+    "lead": "Ci trovi in Via Tommaso Campanella 58, a Scalea.",
+    "directions": "Indicazioni",
+    "cta": "Come Arrivare"
+  },
+  "contatti": {
+    "id": "contatti",
+    "title": "Contatti",
+    "lead": "Telefono e social della pasticceria.",
+    "phoneLabel": "Telefono",
+    "instagramLabel": "Instagram",
+    "facebookLabel": "Facebook",
+    "call": "Chiama",
+    "phone": {
+      "label": "Telefono"
+    },
+    "email": {
+      "label": "Email"
+    },
+    "whatsapp": {
+      "label": "WhatsApp"
+    }
+  },
+  "orari": {
+    "id": "orari",
+    "title": "Orari di Apertura",
+    "lead": "Gli orari di apertura.",
+    "tbd": "Gli orari sono disponibili su Google Maps",
+    "maps": "Apri in Google Maps",
+    "note": "Gli orari vanno verificati manualmente e aggiornati. Non pubblicare orari non confermati."
+  },
+  "footer": {
+    "title": "Pasticceria Mary Lou",
+    "rights": "Pasticceria Mary Lou",
+    "address": "Via Tommaso Campanella, 58, 87029 Scalea CS, Italia",
+    "follow": "Seguici",
+    "copyright": "© {{year}} Pasticceria Mary Lou. Tutti i diritti riservati."
+  }
+}
