@@ -28,7 +28,7 @@ export function Footer() {
                 href={t('business.phoneHref')}
                 className="inline-flex min-h-11 items-center text-espresso/80 transition-colors hover:text-terracotta active:text-night"
               >
-                <span className="text-espresso/50">{t('contatti.phoneLabel')}</span>
+                <span className="text-espresso/50">{t('contatti.phone.label')}</span>
                 <span className="ml-2">{t('business.phone')}</span>
               </a>
             </li>
@@ -65,7 +65,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="inline-flex min-h-11 items-center text-espresso/80 transition-colors hover:text-terracotta active:text-night"
               >
-                {t('contatti.instagramLabel')}
+                {t('contatti.instagram.label')}
               </a>
             </li>
             <li>
@@ -75,7 +75,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="inline-flex min-h-11 items-center text-espresso/80 transition-colors hover:text-terracotta active:text-night"
               >
-                {t('contatti.facebookLabel')}
+                {t('contatti.facebook.label')}
               </a>
             </li>
             <li>

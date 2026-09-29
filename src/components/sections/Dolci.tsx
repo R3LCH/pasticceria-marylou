@@ -4,96 +4,22 @@ import { Section } from '../layout/Section.tsx'
 import { useGSAP } from '../../hooks/useGSAP.ts'
 import { fadeInOnScroll, staggerGrid } from '../../utils/animations.ts'
 
-type DolciLabelKey =
-  | 'dolci.items.cornetti'
-  | 'dolci.items.pastries'
-  | 'dolci.items.dolci'
-
-type DolciSpan = {
-  col: string
-  row: string
-  aspect: string
-}
-
 type DolciCard = {
   seed: number
-  labelKey: DolciLabelKey
-  span: DolciSpan
+  // Desktop collage placement (lg: 4-column grid, fixed row height).
+  span: string
 }
 
+// lg: 4 columns × 3 rows = 12 cells, fully filled (4 + 6×1 + 2).
 const cards: readonly DolciCard[] = [
-  {
-    seed: 1,
-    labelKey: 'dolci.items.cornetti',
-    span: {
-      col: 'sm:col-span-2 lg:col-span-2',
-      row: 'lg:row-span-2',
-      aspect: 'aspect-[3/2] lg:aspect-auto lg:h-full lg:min-h-[28rem]',
-    },
-  },
-  {
-    seed: 2,
-    labelKey: 'dolci.items.pastries',
-    span: {
-      col: 'sm:col-span-1 lg:col-span-1',
-      row: 'lg:row-span-1',
-      aspect: 'aspect-[3/2]',
-    },
-  },
-  {
-    seed: 3,
-    labelKey: 'dolci.items.dolci',
-    span: {
-      col: 'sm:col-span-1 lg:col-span-1',
-      row: 'lg:row-span-1',
-      aspect: 'aspect-[3/2]',
-    },
-  },
-  {
-    seed: 4,
-    labelKey: 'dolci.items.pastries',
-    span: {
-      col: 'sm:col-span-1 lg:col-span-1',
-      row: 'lg:row-span-1',
-      aspect: 'aspect-[3/2]',
-    },
-  },
-  {
-    seed: 5,
-    labelKey: 'dolci.items.cornetti',
-    span: {
-      col: 'sm:col-span-1 lg:col-span-1',
-      row: 'lg:row-span-1',
-      aspect: 'aspect-[3/2]',
-    },
-  },
-  {
-    seed: 6,
-    labelKey: 'dolci.items.dolci',
-    span: {
-      col: 'sm:col-span-2 lg:col-span-1',
-      row: 'lg:row-span-1',
-      aspect: 'aspect-[3/2]',
-    },
-  },
-  {
-    seed: 7,
-    labelKey: 'dolci.items.pastries',
-    span: {
-      col: 'sm:col-span-1 lg:col-span-2',
-      row: 'lg:row-span-1',
-      aspect: 'aspect-[3/2] lg:aspect-[2/1]',
-    },
-  },
-  {
-    seed: 8,
-    labelKey: 'dolci.items.dolci',
-    span: {
-      col: 'sm:col-span-1 lg:col-span-1',
-      row: 'lg:row-span-1',
-      aspect: 'aspect-[3/2]',
-    },
-  },
+  { seed: 1, span: 'lg:col-span-2 lg:row-span-2' },
+  { seed: 2, span: '' },
+  { seed: 3, span: '' },
+  { seed: 4, span: '' },
+  { seed: 6, span: '' },
+  { seed: 5, span: 'lg:col-span-2' },
+  { seed: 7, span: '' },
+  { seed: 8, span: '' },
 ]
 
 function imageSrc(seed: number) {
@@ -109,7 +35,7 @@ export function Dolci() {
     staggerGrid('.dolci-grid', {
       childSelector: ':scope > li',
       start: 'top 80%',
-      stagger: 0.08,
+      stagger: 0.06,
       distance: 20,
       duration: 0.65,
     })
@@ -122,23 +48,25 @@ export function Dolci() {
         <p className="mt-6 text-18 leading-relaxed text-muted">{t('dolci.subtitle')}</p>
       </header>
 
-      <ul className="dolci-grid mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 lg:auto-rows-[14rem] lg:gap-6">
+      {/* Mobile/tablet: horizontal snap panorama. Desktop: compact 4-column collage. */}
+      <ul className="dolci-grid -mx-4 mt-12 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-2 lg:mx-auto lg:mt-14 lg:grid lg:max-w-5xl lg:grid-cols-4 lg:auto-rows-[11rem] lg:gap-4 lg:overflow-visible lg:px-0 lg:pb-0">
         {cards.map((card) => {
-          const label = t(card.labelKey)
+          const label = t(`dolci.photos.${card.seed}`)
           return (
-            <li key={card.seed} className={`${card.span.col} ${card.span.row}`}>
-              <figure
-                className={`group relative h-full overflow-hidden rounded-12 border border-espresso/10 bg-white shadow-subtle transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(60,36,21,0.12)] ${card.span.aspect}`}
-              >
+            <li
+              key={card.seed}
+              className={`w-[72%] shrink-0 snap-center sm:w-[44%] lg:w-auto ${card.span}`}
+            >
+              <figure className="group relative aspect-[4/5] h-full overflow-hidden rounded-12 border border-espresso/10 bg-white shadow-subtle lg:aspect-auto">
                 <img
                   src={imageSrc(card.seed)}
-                  alt=""
+                  alt={label}
                   width={600}
-                  height={400}
+                  height={600}
                   loading="lazy"
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
                 />
-                <figcaption className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-night/70 to-transparent px-4 pb-4 pt-10 font-serif text-18 text-cream">
+                <figcaption className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-night/70 to-transparent px-4 pb-3 pt-10 font-serif text-16 text-cream">
                   {label}
                 </figcaption>
               </figure>

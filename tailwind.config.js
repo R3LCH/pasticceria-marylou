@@ -5,15 +5,15 @@ export default {
     extend: {
       colors: {
         cream: {
-          DEFAULT: 'var(--color-cream-50)',
-          50: 'var(--color-cream-50)',
-          100: 'var(--color-cream-100)',
+          DEFAULT: 'rgb(var(--rgb-cream-50) / <alpha-value>)',
+          50: 'rgb(var(--rgb-cream-50) / <alpha-value>)',
+          100: 'rgb(var(--rgb-cream-100) / <alpha-value>)',
         },
-        espresso: 'var(--color-espresso)',
-        terracotta: 'var(--color-terracotta)',
-        ink: 'var(--color-text-dark)',
-        muted: 'var(--color-text-muted)',
-        night: 'var(--color-night)',
+        espresso: 'rgb(var(--rgb-espresso) / <alpha-value>)',
+        terracotta: 'rgb(var(--rgb-terracotta) / <alpha-value>)',
+        ink: 'rgb(var(--rgb-text-dark) / <alpha-value>)',
+        muted: 'rgb(var(--rgb-text-muted) / <alpha-value>)',
+        night: 'rgb(var(--rgb-night) / <alpha-value>)',
       },
       fontFamily: {
         serif: ['"Playfair Display"', 'Georgia', 'serif'],

@@ -35,4 +35,16 @@ void i18n
     },
   })
 
+// Keep <html lang>, <title> and meta description in sync with the active language.
+function syncDocument(lng: string) {
+  document.documentElement.lang = lng.slice(0, 2)
+  document.title = i18n.t('meta.title')
+  document
+    .querySelector('meta[name="description"]')
+    ?.setAttribute('content', i18n.t('meta.description'))
+}
+
+i18n.on('languageChanged', syncDocument)
+if (i18n.isInitialized) syncDocument(i18n.resolvedLanguage ?? defaultLanguage)
+
 export default i18n

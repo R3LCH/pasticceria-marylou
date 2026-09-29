@@ -43,7 +43,7 @@ export function Header() {
     <header className="pointer-events-none sticky top-0 z-40">
       <div className="px-4">
         <div
-          className={`pointer-events-auto mx-auto mt-6 hidden w-max max-w-[calc(100%-2rem)] items-center gap-8 rounded-full border border-espresso/10 bg-cream/75 px-5 py-2.5 backdrop-blur-md transition-shadow duration-200 md:flex ${
+          className={`pointer-events-auto mx-auto mt-6 hidden w-[54rem] max-w-[calc(100%-2rem)] items-center justify-between gap-6 rounded-full border border-espresso/10 bg-cream/75 px-5 py-2.5 backdrop-blur-md transition-shadow duration-200 md:flex ${
             stuck ? 'shadow-[0_2px_8px_rgba(60,36,21,0.05)]' : ''
           }`}
         >

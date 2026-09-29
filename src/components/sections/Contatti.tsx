@@ -2,71 +2,59 @@ import type { ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Section } from '../layout/Section.tsx'
 
-type ContactLabelKey =
-  | 'contatti.phone.label'
-  | 'contatti.email.label'
-  | 'contatti.whatsapp.label'
-
-type ContactDisplayKey = 'business.phone' | 'business.email' | 'business.whatsapp'
-
-type ContactMethod = {
-  id: 'phone' | 'email' | 'whatsapp'
-  labelKey: ContactLabelKey
-  displayKey: ContactDisplayKey
+type ContactCard = {
+  id: 'phone' | 'whatsapp' | 'email' | 'instagram' | 'facebook'
+  labelKey:
+    | 'contatti.phone.label'
+    | 'contatti.whatsapp.label'
+    | 'contatti.email.label'
+    | 'contatti.instagram.label'
+    | 'contatti.facebook.label'
+  valueKey:
+    | 'business.phone'
+    | 'contatti.whatsapp.value'
+    | 'business.email'
+    | 'business.instagram'
+    | 'business.facebook'
   href: string
   external: boolean
 }
 
-type SocialLabelKey =
-  | 'contatti.instagramLabel'
-  | 'contatti.facebookLabel'
-  | 'business.mapsLabel'
-
-type SocialLink = {
-  id: 'instagram' | 'facebook' | 'maps'
-  labelKey: SocialLabelKey
-  href: string
-}
-
-const contacts: readonly ContactMethod[] = [
+const cards: readonly ContactCard[] = [
   {
     id: 'phone',
     labelKey: 'contatti.phone.label',
-    displayKey: 'business.phone',
+    valueKey: 'business.phone',
     href: 'tel:0985272108',
-    external: false,
-  },
-  {
-    id: 'email',
-    labelKey: 'contatti.email.label',
-    displayKey: 'business.email',
-    href: 'mailto:marylouscalea@gmail.com',
     external: false,
   },
   {
     id: 'whatsapp',
     labelKey: 'contatti.whatsapp.label',
-    displayKey: 'business.whatsapp',
+    valueKey: 'contatti.whatsapp.value',
     href: 'https://wa.me/390985272108',
     external: true,
   },
-]
-
-const socials: readonly SocialLink[] = [
+  {
+    id: 'email',
+    labelKey: 'contatti.email.label',
+    valueKey: 'business.email',
+    href: 'mailto:marylouscalea@gmail.com',
+    external: false,
+  },
   {
     id: 'instagram',
-    labelKey: 'contatti.instagramLabel',
+    labelKey: 'contatti.instagram.label',
+    valueKey: 'business.instagram',
     href: 'https://www.instagram.com/pasticceriamarylou/',
+    external: true,
   },
   {
     id: 'facebook',
-    labelKey: 'contatti.facebookLabel',
+    labelKey: 'contatti.facebook.label',
+    valueKey: 'business.facebook',
     href: 'https://www.facebook.com/pasticceriamarylouscalea/',
-  },
-  {
-    id: 'maps',
-    labelKey: 'business.mapsLabel',
-    href: 'https://maps.app.goo.gl/JzZekZSvMkiQJ5xK9',
+    external: true,
   },
 ]
 
@@ -125,79 +113,47 @@ function FacebookIcon() {
   )
 }
 
-function MapsIcon() {
-  return (
-    <svg {...iconProps}>
-      <path d="M12 20.5s6-5.2 6-10a6 6 0 1 0-12 0c0 4.8 6 10 6 10z" />
-      <circle cx="12" cy="10.5" r="2" />
-    </svg>
-  )
-}
-
-const contactIcons: Record<ContactMethod['id'], () => ReactNode> = {
+const icons: Record<ContactCard['id'], () => ReactNode> = {
   phone: PhoneIcon,
-  email: EmailIcon,
   whatsapp: WhatsAppIcon,
-}
-
-const socialIcons: Record<SocialLink['id'], () => ReactNode> = {
+  email: EmailIcon,
   instagram: InstagramIcon,
   facebook: FacebookIcon,
-  maps: MapsIcon,
 }
 
 export function Contatti() {
   const { t } = useTranslation()
 
   return (
-    <Section id="contatti">
+    <Section id="contatti" background="white">
       <header className="mx-auto max-w-2xl text-center">
         <h2>{t('contatti.title')}</h2>
         <p className="mt-6 text-18 leading-relaxed text-muted">{t('contatti.lead')}</p>
       </header>
 
-      <ul className="mt-16 grid grid-cols-1 gap-4 sm:gap-5 md:grid-cols-3 md:gap-6">
-        {contacts.map((contact) => {
-          const Icon = contactIcons[contact.id]
+      {/* 6-column grid: first row 3 cards (span 2), second row 2 cards (span 3). */}
+      <ul className="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-6 lg:gap-6">
+        {cards.map((card, index) => {
+          const Icon = icons[card.id]
+          // lg: 3 cards (span 2) then 2 cards (span 3); sm: last card spans both columns.
+          const span =
+            index < 3 ? 'lg:col-span-2' : index === cards.length - 1 ? 'sm:col-span-2 lg:col-span-3' : 'lg:col-span-3'
           return (
-            <li key={contact.id}>
+            <li key={card.id} className={span}>
               <a
-                href={contact.href}
-                {...(contact.external
-                  ? { target: '_blank', rel: 'noopener noreferrer' }
-                  : {})}
+                href={card.href}
+                {...(card.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                 className="flex h-full flex-col items-center rounded-12 border border-espresso/10 bg-white px-6 py-8 text-center shadow-subtle transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(60,36,21,0.12)] active:translate-y-0 active:shadow-subtle"
               >
                 <span className="flex h-12 w-12 items-center justify-center rounded-full bg-cream-100 text-terracotta">
                   <Icon />
                 </span>
                 <span className="mt-5 text-14 uppercase tracking-[0.08em] text-muted">
-                  {t(contact.labelKey)}
+                  {t(card.labelKey)}
                 </span>
                 <span className="mt-2 break-all font-serif text-18 text-espresso">
-                  {t(contact.displayKey)}
+                  {t(card.valueKey)}
                 </span>
-              </a>
-            </li>
-          )
-        })}
-      </ul>
-
-      <ul className="mt-10 flex flex-wrap items-center justify-center gap-3">
-        {socials.map((social) => {
-          const Icon = socialIcons[social.id]
-          const label = t(social.labelKey)
-          return (
-            <li key={social.id}>
-              <a
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={label}
-                className="inline-flex min-h-11 items-center gap-2 rounded-full border border-espresso/10 bg-white px-4 text-14 text-espresso shadow-subtle transition duration-300 ease-out hover:-translate-y-1 hover:text-terracotta hover:shadow-[0_12px_28px_rgba(60,36,21,0.12)] active:translate-y-0 active:text-espresso active:shadow-subtle"
-              >
-                <Icon />
-                {label}
               </a>
             </li>
           )

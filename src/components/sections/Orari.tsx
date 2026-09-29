@@ -7,7 +7,7 @@ export function Orari() {
   const { t } = useTranslation()
 
   return (
-    <Section id="orari" background="white">
+    <Section id="orari" background="cream">
       <div className="mx-auto max-w-2xl text-center">
         <h2>{t('orari.title')}</h2>
         <p className="mt-6 text-18 leading-relaxed text-muted">{t('orari.lead')}</p>
@@ -32,15 +32,6 @@ export function Orari() {
         </div>
 
         <p className="mt-10 text-14 leading-relaxed text-muted">{t('orari.note')}</p>
-
-        <a
-          href={t('business.mapsUrl')}
-          target="_blank"
-          rel="noreferrer"
-          className="mt-6 inline-flex min-h-11 items-center font-medium text-terracotta underline decoration-terracotta/40 underline-offset-4 transition-colors hover:text-espresso hover:decoration-espresso"
-        >
-          {t('business.mapsLabel')}
-        </a>
       </div>
     </Section>
   )

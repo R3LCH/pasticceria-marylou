@@ -4,25 +4,10 @@ import { Section } from '../layout/Section.tsx'
 import { useGSAP } from '../../hooks/useGSAP.ts'
 import { fadeInOnScroll, staggerGrid } from '../../utils/animations.ts'
 
-type FreshProduct = {
-  seed: string
-  labelKey:
-    | 'produzioneFresca.items.cornetti'
-    | 'produzioneFresca.items.dolci'
-    | 'produzioneFresca.items.pasticceria'
-}
+const products: readonly number[] = [1, 2, 3, 4, 5, 6]
 
-const products: readonly FreshProduct[] = [
-  { seed: 'fresh-1', labelKey: 'produzioneFresca.items.cornetti' },
-  { seed: 'fresh-2', labelKey: 'produzioneFresca.items.dolci' },
-  { seed: 'fresh-3', labelKey: 'produzioneFresca.items.pasticceria' },
-  { seed: 'fresh-4', labelKey: 'produzioneFresca.items.cornetti' },
-  { seed: 'fresh-5', labelKey: 'produzioneFresca.items.dolci' },
-  { seed: 'fresh-6', labelKey: 'produzioneFresca.items.pasticceria' },
-]
-
-function productSrc(seed: string) {
-  return `${import.meta.env.BASE_URL}images/${seed}.jpg`
+function productSrc(seed: number) {
+  return `${import.meta.env.BASE_URL}images/fresh-${seed}.jpg`
 }
 
 export function ProduzioneFresca() {
@@ -50,16 +35,16 @@ export function ProduzioneFresca() {
       </header>
 
       <ul className="fresh-grid -mx-4 mt-16 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 md:mx-0 md:grid md:grid-cols-3 md:gap-6 md:overflow-visible md:px-0 md:pb-0">
-        {products.map((product) => {
-          const label = t(product.labelKey)
+        {products.map((seed) => {
+          const label = t(`produzioneFresca.photos.${seed}`)
           return (
             <li
-              key={product.seed}
+              key={seed}
               className="w-[78%] shrink-0 snap-start sm:w-[46%] md:w-auto"
             >
               <figure className="overflow-hidden rounded-12 bg-cream shadow-subtle">
                 <img
-                  src={productSrc(product.seed)}
+                  src={productSrc(seed)}
                   alt={label}
                   width={700}
                   height={500}

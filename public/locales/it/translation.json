@@ -5,15 +5,11 @@
   },
   "nav": {
     "aria": "Navigazione principale",
-    "home": "Home",
     "chiSiamo": "Chi siamo",
     "dolci": "Dolci",
-    "produzioneFresca": "Produzione fresca",
     "torte": "Torte",
-    "gallery": "Galleria",
     "doveSiamo": "Dove siamo",
     "contatti": "Contatti",
-    "orari": "Orari",
     "menu": "Menu",
     "close": "Chiudi"
   },
@@ -28,7 +24,6 @@
     "address": "Via Tommaso Campanella, 58",
     "city": "87029 Scalea CS",
     "country": "Italia",
-    "addressFull": "Via Tommaso Campanella, 58, 87029 Scalea CS, Italia",
     "phone": "0985 272108",
     "phoneHref": "tel:0985272108",
     "instagram": "@pasticceriamarylou",
@@ -52,93 +47,110 @@
     }
   },
   "chiSiamo": {
-    "id": "chi-siamo",
-    "eyebrow": "La pasticceria",
+    "eyebrow": "Pasticceria · Bar · Caffetteria",
     "title": "Chi siamo",
-    "lead": "Pasticceria Mary Lou è a Scalea, in Via Tommaso Campanella 58.",
-    "description": "Pasticceria, bar e caffetteria a Scalea. La colazione, i dolci e le torte si preparano in laboratorio, in Via Tommaso Campanella 58."
+    "description": "Da oltre dieci anni Mary Lou è pasticceria, bar e caffetteria a Scalea. La giornata comincia con la colazione: cornetti caldi, caffè e cappuccino al banco. Poi arrivano i dolci, la piccola pasticceria e i bignè che ogni giorno riempiono la nostra vetrina, tutti preparati nel nostro laboratorio. E per i momenti speciali prepariamo torte su ordinazione.",
+    "features": [
+      "Pasticceria",
+      "Bar e caffetteria",
+      "Colazioni",
+      "Dolci",
+      "Torte su ordinazione"
+    ],
+    "imageAlt": "La vetrina di Mary Lou piena di pasticcini, con torte decorate in alto"
   },
   "dolci": {
-    "id": "dolci",
     "title": "I Nostri Dolci",
-    "subtitle": "Cornetti, pasticceria e dolci preparati nel laboratorio di Scalea.",
-    "lead": "I dolci della pasticceria.",
-    "items": {
-      "cornetti": "Cornetti",
-      "pastries": "Pasticceria",
-      "dolci": "Dolci"
+    "subtitle": "Cornetti, piccola pasticceria e dolci dal nostro laboratorio di Scalea.",
+    "photos": {
+      "1": "Cornetto bicolore",
+      "2": "Bignè alla chantilly",
+      "3": "Tartellette al pistacchio",
+      "4": "Crostatine alla frutta",
+      "5": "Cuori al cioccolato e cubi alla crema",
+      "6": "Bignè glassati con ciliegia",
+      "7": "Tranci al pistacchio",
+      "8": "Crostatine ai fichi"
     }
   },
   "produzioneFresca": {
-    "id": "produzione-fresca",
-    "title": "Produzione fresca",
-    "lead": "La produzione fresca del laboratorio.",
-    "description": "Cornetti, dolci e pasticceria preparati ogni giorno nel laboratorio di Scalea.",
-    "items": {
-      "cornetti": "Cornetti",
-      "dolci": "Dolci",
-      "pasticceria": "Pasticceria"
+    "title": "Freschi ogni giorno",
+    "description": "Cornetti, ciambelle e pasticceria preparati ogni giorno nel nostro laboratorio di Scalea.",
+    "photos": {
+      "1": "Cornetto al pistacchio",
+      "2": "Ciambella zuccherata",
+      "3": "Cornetto alla crema",
+      "4": "Treccine zuccherate",
+      "5": "Brioche con panna",
+      "6": "Cornetti al cacao"
     }
   },
   "torte": {
-    "id": "torte",
     "title": "Torte su Ordinazione",
     "description": "Torte preparate su ordinazione nel laboratorio di Scalea, per un compleanno, una festa o un momento da festeggiare.",
-    "lead": "Le torte della pasticceria.",
     "occasions": [
       "Compleanni",
       "Feste",
       "Ricorrenze",
       "Eventi speciali"
     ],
-    "cta": "Richiedi una Torta",
+    "cta": "Ordina su WhatsApp",
+    "orCall": "oppure chiamaci",
     "whatsappMessage": "Ciao! Vorrei ordinare una torta per...",
-    "imageAlt": "Torta {{index}}"
-  },
-  "gallery": {
-    "id": "gallery",
-    "title": "Galleria",
-    "lead": "Foto dalla pasticceria.",
-    "close": "Chiudi",
-    "previous": "Foto precedente",
-    "next": "Foto successiva",
-    "filters": "Filtra le foto",
-    "photo": "{{category}} {{n}}",
-    "categories": {
-      "all": "Tutti",
-      "dolci": "Dolci",
-      "torte": "Torte",
-      "colazione": "Colazione",
-      "pasticceria": "Pasticceria"
+    "photos": {
+      "1": "Torta drip per i 18 anni con meringhe",
+      "2": "Torta di compleanno con scritta blu",
+      "3": "Torta da festa con rosa di cioccolato",
+      "4": "Torta a cuore al cioccolato",
+      "5": "Red velvet con ciliegie",
+      "6": "Torta mimosa"
     }
   },
   "doveSiamo": {
-    "id": "dove-siamo",
     "title": "Dove siamo",
-    "lead": "Ci trovi in Via Tommaso Campanella 58, a Scalea.",
-    "directions": "Indicazioni",
+    "lead": "Siamo in Via Tommaso Campanella, vicino al centro di Scalea: a pochi passi da Piazza Caloprese e dal centro storico.",
+    "nearbyTitle": "Nei dintorni, a piedi",
+    "nearby": [
+      {
+        "place": "Piazza Gregorio Caloprese",
+        "time": "~5 min"
+      },
+      {
+        "place": "Centro storico e Torre Talao",
+        "time": "~10 min"
+      },
+      {
+        "place": "Stazione di Scalea",
+        "time": "~10 min"
+      },
+      {
+        "place": "Lungomare",
+        "time": "~15 min"
+      }
+    ],
     "cta": "Come Arrivare"
   },
   "contatti": {
-    "id": "contatti",
     "title": "Contatti",
-    "lead": "Telefono e social della pasticceria.",
-    "phoneLabel": "Telefono",
-    "instagramLabel": "Instagram",
-    "facebookLabel": "Facebook",
-    "call": "Chiama",
+    "lead": "Chiamaci, scrivici su WhatsApp o seguici sui social.",
     "phone": {
       "label": "Telefono"
+    },
+    "whatsapp": {
+      "label": "WhatsApp",
+      "value": "Scrivici un messaggio"
     },
     "email": {
       "label": "Email"
     },
-    "whatsapp": {
-      "label": "WhatsApp"
+    "instagram": {
+      "label": "Instagram"
+    },
+    "facebook": {
+      "label": "Facebook"
     }
   },
   "orari": {
-    "id": "orari",
     "title": "Orari di Apertura",
     "lead": "Siamo aperti 6 giorni su 7.",
     "monday": "Lunedì",
@@ -161,9 +173,6 @@
     "note": "Gli orari possono variare durante le festività."
   },
   "footer": {
-    "title": "Pasticceria Mary Lou",
-    "rights": "Pasticceria Mary Lou",
-    "address": "Via Tommaso Campanella, 58, 87029 Scalea CS, Italia",
     "follow": "Seguici",
     "copyright": "© {{year}} Pasticceria Mary Lou. Tutti i diritti riservati."
   }

@@ -9,6 +9,15 @@
   --color-night: #241812;
   --color-border: rgba(60, 36, 21, 0.08);
 
+  /* Space-separated RGB channels so Tailwind opacity modifiers (e.g. /10) work. */
+  --rgb-cream-50: 251 246 239;
+  --rgb-cream-100: 243 235 224;
+  --rgb-espresso: 60 36 21;
+  --rgb-terracotta: 196 106 74;
+  --rgb-text-dark: 60 36 21;
+  --rgb-text-muted: 138 115 100;
+  --rgb-night: 36 24 18;
+
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans: 'Inter', system-ui, sans-serif;
 

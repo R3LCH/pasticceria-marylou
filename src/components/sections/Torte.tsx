@@ -1,7 +1,6 @@
 import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Section } from '../layout/Section.tsx'
-import { Button } from '../ui/Button.tsx'
 import { useGSAP } from '../../hooks/useGSAP.ts'
 import { fadeInOnScroll, staggerGrid } from '../../utils/animations.ts'
 
@@ -26,19 +25,8 @@ function cakeSrc(seed: number) {
 
 function WhatsAppIcon() {
   return (
-    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-      <path
-        d="M8 1.5A6.5 6.5 0 0 0 2.2 11.7L1.5 14.5l2.9-.7A6.5 6.5 0 1 0 8 1.5Z"
-        stroke="currentColor"
-        strokeWidth="1.2"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M6.1 6.2c.1.9.7 1.8 1.6 2.5.8.6 1.6.8 2 .6"
-        stroke="currentColor"
-        strokeWidth="1.2"
-        strokeLinecap="round"
-      />
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z" />
     </svg>
   )
 }
@@ -81,7 +69,7 @@ export function Torte() {
 
       <ul className="torte-grid mt-16 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
         {cakes.map((cake) => {
-          const alt = t('torte.imageAlt', { index: cake.seed })
+          const alt = t(`torte.photos.${cake.seed}`)
           return (
             <li key={cake.seed}>
               <img
@@ -97,10 +85,25 @@ export function Torte() {
         })}
       </ul>
 
-      <div className="torte-cta mt-12 flex justify-center">
-        <Button href={href} className="!w-full !justify-center md:!w-fit" icon={<WhatsAppIcon />}>
+      <div className="torte-cta mt-12 flex flex-col items-center gap-4">
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-full bg-[#25D366] px-8 text-18 font-medium text-white shadow-subtle transition-transform duration-200 ease-out hover:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta md:w-fit"
+        >
+          <WhatsAppIcon />
           {t('torte.cta')}
-        </Button>
+        </a>
+        <p className="text-16 text-muted">
+          {t('torte.orCall')}{' '}
+          <a
+            href={t('business.phoneHref')}
+            className="inline-flex min-h-11 items-center font-serif text-24 text-espresso underline decoration-espresso/30 underline-offset-4 hover:text-terracotta"
+          >
+            {t('business.phone')}
+          </a>
+        </p>
       </div>
     </Section>
   )

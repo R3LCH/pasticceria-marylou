@@ -9,6 +9,7 @@ const imageSrc = `${import.meta.env.BASE_URL}images/chi-siamo.jpg`
 export function ChiSiamo() {
   const { t } = useTranslation()
   const root = useRef<HTMLElement>(null)
+  const features = t('chiSiamo.features', { returnObjects: true }) as string[]
 
   useGSAP(() => {
     fadeInOnScroll('.chi-copy', { start: 'top 80%', distance: 24, duration: 0.9 })
@@ -26,14 +27,24 @@ export function ChiSiamo() {
           <p className="mt-6 max-w-prose text-18 leading-relaxed text-muted">
             {t('chiSiamo.description')}
           </p>
+          <ul className="mt-8 flex flex-wrap gap-x-3 gap-y-2">
+            {features.map((feature) => (
+              <li
+                key={feature}
+                className="rounded-full border border-espresso/15 px-4 py-1.5 text-14 tracking-wide text-espresso"
+              >
+                {feature}
+              </li>
+            ))}
+          </ul>
         </div>
 
         <figure className="chi-photo order-1 overflow-hidden rounded-12 shadow-subtle md:order-2">
           <img
             src={imageSrc}
-            alt={t('chiSiamo.title')}
-            width={800}
-            height={600}
+            alt={t('chiSiamo.imageAlt')}
+            width={720}
+            height={540}
             loading="lazy"
             className="aspect-[4/3] w-full object-cover"
           />
