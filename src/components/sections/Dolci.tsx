@@ -97,7 +97,7 @@ const cards: readonly DolciCard[] = [
 ]
 
 function imageSrc(seed: number) {
-  return `https://picsum.photos/seed/marylou-dolci-${seed}/600/400`
+  return `${import.meta.env.BASE_URL}images/dolci-${seed}.jpg`
 }
 
 export function Dolci() {

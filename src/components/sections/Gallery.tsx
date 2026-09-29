@@ -44,7 +44,7 @@ const images: readonly GalleryImage[] = [
 ]
 
 function imageSrc(image: GalleryImage) {
-  return `https://picsum.photos/seed/marylou-gallery-${image.category}-${image.n}/${image.width}/${image.height}`
+  return `${import.meta.env.BASE_URL}images/g-${image.category}-${image.n}.jpg`
 }
 
 export function Gallery() {
@@ -165,9 +165,7 @@ export function Gallery() {
                   width={image.width}
                   height={image.height}
                   loading="lazy"
-                  className={`w-full object-cover transition duration-300 ease-out group-hover:scale-[1.03] ${
-                    image.tall ? 'aspect-[4/5]' : 'aspect-[4/3]'
-                  }`}
+                  className="aspect-square w-full object-cover transition duration-300 ease-out group-hover:scale-[1.03]"
                 />
               </button>
             </li>

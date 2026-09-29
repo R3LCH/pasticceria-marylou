@@ -4,7 +4,7 @@ import { Section } from '../layout/Section.tsx'
 import { useGSAP } from '../../hooks/useGSAP.ts'
 import { fadeInOnScroll, slideIn } from '../../utils/animations.ts'
 
-const imageSrc = 'https://picsum.photos/seed/marylou-interior/800/600'
+const imageSrc = `${import.meta.env.BASE_URL}images/chi-siamo.jpg`
 
 export function ChiSiamo() {
   const { t } = useTranslation()

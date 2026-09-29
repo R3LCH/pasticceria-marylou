@@ -21,7 +21,7 @@ const cakes: readonly Cake[] = [
 const whatsappNumber = '390985272108'
 
 function cakeSrc(seed: number) {
-  return `https://picsum.photos/seed/marylou-cake-${seed}/700/700`
+  return `${import.meta.env.BASE_URL}images/cake-${seed}.jpg`
 }
 
 function WhatsAppIcon() {

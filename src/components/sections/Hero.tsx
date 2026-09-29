@@ -4,7 +4,7 @@ import { Button } from '../ui/Button.tsx'
 import { useGSAP } from '../../hooks/useGSAP.ts'
 import { fadeInOnScroll, parallax } from '../../utils/animations.ts'
 
-const HERO_IMAGE = 'https://picsum.photos/seed/marylou-hero/1920/1080'
+const HERO_IMAGE = `${import.meta.env.BASE_URL}images/hero.jpg`
 
 function PhoneIcon() {
   return (

@@ -13,16 +13,16 @@ type FreshProduct = {
 }
 
 const products: readonly FreshProduct[] = [
-  { seed: 'marylou-fresh-1', labelKey: 'produzioneFresca.items.cornetti' },
-  { seed: 'marylou-fresh-2', labelKey: 'produzioneFresca.items.dolci' },
-  { seed: 'marylou-fresh-3', labelKey: 'produzioneFresca.items.pasticceria' },
-  { seed: 'marylou-fresh-4', labelKey: 'produzioneFresca.items.cornetti' },
-  { seed: 'marylou-fresh-5', labelKey: 'produzioneFresca.items.dolci' },
-  { seed: 'marylou-fresh-6', labelKey: 'produzioneFresca.items.pasticceria' },
+  { seed: 'fresh-1', labelKey: 'produzioneFresca.items.cornetti' },
+  { seed: 'fresh-2', labelKey: 'produzioneFresca.items.dolci' },
+  { seed: 'fresh-3', labelKey: 'produzioneFresca.items.pasticceria' },
+  { seed: 'fresh-4', labelKey: 'produzioneFresca.items.cornetti' },
+  { seed: 'fresh-5', labelKey: 'produzioneFresca.items.dolci' },
+  { seed: 'fresh-6', labelKey: 'produzioneFresca.items.pasticceria' },
 ]
 
 function productSrc(seed: string) {
-  return `https://picsum.photos/seed/${seed}/700/500`
+  return `${import.meta.env.BASE_URL}images/${seed}.jpg`
 }
 
 export function ProduzioneFresca() {
