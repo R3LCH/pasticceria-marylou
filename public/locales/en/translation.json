@@ -140,10 +140,25 @@
   "orari": {
     "id": "orari",
     "title": "Opening Hours",
-    "lead": "Opening hours.",
-    "tbd": "Opening hours are available on Google Maps",
-    "maps": "Open in Google Maps",
-    "note": "Hours should be manually verified and updated. Do not publish unconfirmed hours."
+    "lead": "We're open 6 days a week.",
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday",
+    "closed": "Closed",
+    "hours": {
+      "tuesday": "Closed",
+      "wednesday": "7:30 am–1:30 pm, 3:30–8:30 pm",
+      "thursday": "7:30 am–1:30 pm, 3:30–8:30 pm",
+      "friday": "7:30 am–1:30 pm, 3:30–8:30 pm",
+      "saturday": "7:30 am–1:30 pm, 3:30–8:30 pm",
+      "sunday": "7:30 am–1:30 pm, 4–8:30 pm",
+      "monday": "7:30 am–1:30 pm, 3:30–8:30 pm"
+    },
+    "note": "Hours may vary during holidays."
   },
   "footer": {
     "title": "Pasticceria Mary Lou",
