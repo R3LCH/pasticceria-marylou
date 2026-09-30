@@ -11,8 +11,7 @@
     "doveSiamo": "Find us",
     "contatti": "Contact",
     "menu": "Menu",
-    "close": "Close",
-    "recensioni": "Reviews"
+    "close": "Close"
   },
   "language": {
     "label": "Language",
@@ -104,12 +103,10 @@
     },
     "ctaLead": "To order your cake"
   },
-  "recensioni": {
-    "title": "What people say",
-    "lead": "A few reviews from our customers on Google.",
-    "ratingLabel": "{{rating}} out of 5 · {{count}} Google reviews",
-    "stars": "{{count}} out of 5 stars",
-    "readMore": "Read all on Google"
+  "ratings": {
+    "label": "Rated by our customers",
+    "count": "{{count}} reviews",
+    "aria": "{{platform}}: {{rating}} out of 5, {{count}} reviews"
   },
   "doveSiamo": {
     "title": "Find us",

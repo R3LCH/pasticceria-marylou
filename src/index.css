@@ -4,25 +4,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Reviews panorama: two identical halves, so shifting by -50% → 0 loops seamlessly to the right. */
-@keyframes reviews-marquee {
-  from {
-    transform: translate3d(-50%, 0, 0);
-  }
-  to {
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .reviews-track {
-    animation: reviews-marquee 60s linear infinite;
-    will-change: transform;
-  }
-
-  .reviews-marquee:hover .reviews-track,
-  .reviews-marquee:focus-within .reviews-track {
-    animation-play-state: paused;
-  }
-}

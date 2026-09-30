@@ -11,8 +11,7 @@
     "doveSiamo": "Dove siamo",
     "contatti": "Contatti",
     "menu": "Menu",
-    "close": "Chiudi",
-    "recensioni": "Recensioni"
+    "close": "Chiudi"
   },
   "language": {
     "label": "Lingua",
@@ -104,12 +103,10 @@
     },
     "ctaLead": "Per ordinare la tua torta"
   },
-  "recensioni": {
-    "title": "Dicono di noi",
-    "lead": "Alcune recensioni dei nostri clienti su Google.",
-    "ratingLabel": "{{rating}} su 5 · {{count}} recensioni su Google",
-    "stars": "{{count}} stelle su 5",
-    "readMore": "Leggi tutte su Google"
+  "ratings": {
+    "label": "Le valutazioni dei nostri clienti",
+    "count": "{{count}} recensioni",
+    "aria": "{{platform}}: {{rating}} su 5, {{count}} recensioni"
   },
   "doveSiamo": {
     "title": "Dove siamo",

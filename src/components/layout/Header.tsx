@@ -6,7 +6,6 @@ const links = [
   { key: 'nav.chiSiamo', href: '#chi-siamo' },
   { key: 'nav.dolci', href: '#i-nostri-dolci' },
   { key: 'nav.torte', href: '#torte' },
-  { key: 'nav.recensioni', href: '#recensioni' },
   { key: 'nav.doveSiamo', href: '#dove-siamo' },
   { key: 'nav.contatti', href: '#contatti' },
 ] as const
