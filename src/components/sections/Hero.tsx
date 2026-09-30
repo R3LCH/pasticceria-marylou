@@ -52,8 +52,8 @@ export function Hero() {
       <img
         src={HERO_IMAGE}
         alt=""
-        width={1280}
-        height={854}
+        width={800}
+        height={599}
         className="hero-photo absolute inset-0 size-full scale-105 object-cover"
       />
       <div className="absolute inset-0 bg-[#241812]/60" aria-hidden="true" />
