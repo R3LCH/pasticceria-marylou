@@ -5,6 +5,7 @@ import { useGSAP } from '../../hooks/useGSAP.ts'
 import { fadeInOnScroll, parallax } from '../../utils/animations.ts'
 
 const HERO_IMAGE = `${import.meta.env.BASE_URL}images/hero.jpg`
+const LOGO_LIGHT = `${import.meta.env.BASE_URL}images/logo-light.png`
 
 function PhoneIcon() {
   return (
@@ -14,23 +15,6 @@ function PhoneIcon() {
         stroke="currentColor"
         strokeWidth="1.2"
         strokeLinejoin="round"
-      />
-    </svg>
-  )
-}
-
-function WhatsAppIcon() {
-  return (
-    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-      <path
-        d="M8 2.2a5.7 5.7 0 0 0-4.9 8.6L2.4 13.6l2.9-.7A5.8 5.8 0 1 0 8 2.2Z"
-        stroke="currentColor"
-        strokeWidth="1.2"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M6.1 6.2c.1-.3.3-.3.5-.3h.4c.1 0 .3 0 .4.3.1.4.4 1.2.4 1.3.1.1 0 .3-.1.4l-.2.3c-.1.1-.1.2 0 .4.2.3.6.9 1.3 1.2.5.2.7.2.8 0l.3-.4c.1-.1.2-.1.4 0 .1.1 1 .5 1.1.6.2.1.2.2.2.4 0 .3-.3.9-.7 1-.4.2-1 .2-1.8-.1-.8-.3-1.8-.9-2.5-1.7-.7-.8-1.1-1.5-1.2-2.1-.1-.5 0-1 .2-1.3Z"
-        fill="currentColor"
       />
     </svg>
   )
@@ -68,13 +52,20 @@ export function Hero() {
       <img
         src={HERO_IMAGE}
         alt=""
-        width={1920}
-        height={1080}
+        width={1280}
+        height={854}
         className="hero-photo absolute inset-0 size-full scale-105 object-cover"
       />
       <div className="absolute inset-0 bg-[#241812]/60" aria-hidden="true" />
 
       <div className="hero-copy relative flex min-h-[100dvh] flex-col items-center justify-center px-6 pb-24 pt-28 text-center">
+        <img
+          src={LOGO_LIGHT}
+          alt={t('hero.logoAlt')}
+          width={900}
+          height={1110}
+          className="mb-6 h-28 w-auto sm:h-36"
+        />
         <p className="text-xs uppercase tracking-[0.18em] text-cream/75">
           {t('hero.eyebrow')}
         </p>
@@ -84,21 +75,13 @@ export function Hero() {
         <p className="mt-5 max-w-xl text-16 leading-relaxed text-cream/85 sm:text-18">
           {t('hero.subtitle')}
         </p>
-        <div className="mt-10 flex w-full max-w-xs flex-col items-stretch gap-3 sm:w-auto sm:max-w-none sm:flex-row sm:items-center sm:justify-center">
+        <div className="mt-10 flex w-full max-w-xs justify-center sm:w-auto sm:max-w-none">
           <Button
             href="tel:0985272108"
             className="!w-full !justify-center !border-cream !bg-cream !text-espresso hover:!bg-cream-100 sm:!w-fit"
             icon={<PhoneIcon />}
           >
             {t('hero.cta.call')}
-          </Button>
-          <Button
-            href="https://wa.me/390985272108"
-            variant="secondary"
-            className="!w-full !justify-center !border-cream/50 !bg-transparent !text-cream hover:!border-cream hover:!bg-cream/10 sm:!w-fit"
-            icon={<WhatsAppIcon />}
-          >
-            {t('hero.cta.whatsapp')}
           </Button>
         </div>
       </div>

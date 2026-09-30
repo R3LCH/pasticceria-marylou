@@ -1,5 +1,7 @@
 import { useTranslation } from 'react-i18next'
 
+const LOGO = `${import.meta.env.BASE_URL}images/logo.png`
+
 export function Footer() {
   const { t } = useTranslation()
   const year = new Date().getFullYear()
@@ -38,16 +40,6 @@ export function Footer() {
                 className="inline-flex min-h-11 items-center break-all text-espresso/80 transition-colors hover:text-terracotta active:text-night"
               >
                 {t('business.email')}
-              </a>
-            </li>
-            <li>
-              <a
-                href={t('business.whatsappHref')}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex min-h-11 items-center text-espresso/80 transition-colors hover:text-terracotta active:text-night"
-              >
-                {t('business.whatsapp')}
               </a>
             </li>
           </ul>
@@ -90,6 +82,17 @@ export function Footer() {
             </li>
           </ul>
         </div>
+      </div>
+
+      <div className="py-8 text-center">
+        <img
+          src={LOGO}
+          alt={t('hero.logoAlt')}
+          width={900}
+          height={1110}
+          loading="lazy"
+          className="mx-auto h-24 w-auto opacity-90"
+        />
       </div>
 
       <div className="border-t border-espresso/10">

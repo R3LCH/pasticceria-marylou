@@ -10,16 +10,17 @@ type DolciCard = {
   span: string
 }
 
-// lg: 4 columns × 3 rows = 12 cells, fully filled (4 + 6×1 + 2).
+// lg: 4 columns × 3 rows = 12 cells, fully filled (one 2×2, one 2×1, six 1×1).
+// Seed 2 (chantilly bignè) is the large tile; seeds 1 and 5 stay 1×1 (414px sources).
 const cards: readonly DolciCard[] = [
-  { seed: 1, span: 'lg:col-span-2 lg:row-span-2' },
-  { seed: 2, span: '' },
+  { seed: 2, span: 'lg:col-span-2 lg:row-span-2' },
+  { seed: 1, span: '' },
   { seed: 3, span: '' },
-  { seed: 4, span: '' },
+  { seed: 5, span: '' },
   { seed: 6, span: '' },
-  { seed: 5, span: 'lg:col-span-2' },
   { seed: 7, span: '' },
   { seed: 8, span: '' },
+  { seed: 4, span: 'lg:col-span-2' },
 ]
 
 function imageSrc(seed: number) {

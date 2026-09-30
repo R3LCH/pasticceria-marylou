@@ -11,7 +11,8 @@
     "doveSiamo": "Dove siamo",
     "contatti": "Contatti",
     "menu": "Menu",
-    "close": "Chiudi"
+    "close": "Chiudi",
+    "recensioni": "Recensioni"
   },
   "language": {
     "label": "Lingua",
@@ -32,8 +33,6 @@
     "facebookUrl": "https://www.facebook.com/pasticceriamarylouscalea/",
     "mapsUrl": "https://maps.app.goo.gl/JzZekZSvMkiQJ5xK9",
     "mapsLabel": "Apri in Google Maps",
-    "whatsapp": "WhatsApp",
-    "whatsappHref": "https://wa.me/390985272108",
     "email": "marylouscalea@gmail.com",
     "emailHref": "mailto:marylouscalea@gmail.com"
   },
@@ -42,9 +41,9 @@
     "title": "Pasticceria Mary Lou",
     "subtitle": "Dolci, produzione fresca e torte in Via Tommaso Campanella.",
     "cta": {
-      "call": "Chiamaci",
-      "whatsapp": "WhatsApp"
-    }
+      "call": "Chiamaci"
+    },
+    "logoAlt": "Logo Mary Lou Cakes"
   },
   "chiSiamo": {
     "eyebrow": "Pasticceria · Bar · Caffetteria",
@@ -61,13 +60,13 @@
   },
   "dolci": {
     "title": "I Nostri Dolci",
-    "subtitle": "Cornetti, piccola pasticceria e dolci dal nostro laboratorio di Scalea.",
+    "subtitle": "Piccola pasticceria, cannoli e dolci dal nostro laboratorio di Scalea.",
     "photos": {
-      "1": "Cornetto bicolore",
+      "1": "Pesche dolci",
       "2": "Bignè alla chantilly",
       "3": "Tartellette al pistacchio",
       "4": "Crostatine alla frutta",
-      "5": "Cuori al cioccolato e cubi alla crema",
+      "5": "Cannoli siciliani",
       "6": "Bignè glassati con ciliegia",
       "7": "Tranci al pistacchio",
       "8": "Crostatine ai fichi"
@@ -75,12 +74,12 @@
   },
   "produzioneFresca": {
     "title": "Freschi ogni giorno",
-    "description": "Cornetti, brioche e pasticceria preparati ogni giorno nel nostro laboratorio di Scalea.",
+    "description": "La colazione comincia con i nostri cornetti e le nostre brioche, preparati ogni giorno nel laboratorio di Scalea.",
     "photos": {
       "1": "Cornetto al pistacchio",
       "2": "Brioche con crema e amarena",
       "3": "Cornetto alla crema",
-      "4": "Treccine zuccherate",
+      "4": "Cornetto bicolore",
       "5": "Brioche con panna",
       "6": "Cornetti al cacao"
     }
@@ -94,17 +93,23 @@
       "Ricorrenze",
       "Eventi speciali"
     ],
-    "cta": "Ordina su WhatsApp",
-    "orCall": "oppure chiamaci",
-    "whatsappMessage": "Ciao! Vorrei ordinare una torta per...",
+    "cta": "Chiamaci",
     "photos": {
-      "1": "Torta drip per i 18 anni con meringhe",
-      "2": "Torta di compleanno con scritta blu",
-      "3": "Torta da festa con rosa di cioccolato",
-      "4": "Torta a cuore al cioccolato",
-      "5": "Red velvet con ciliegie",
-      "6": "Torta mimosa"
-    }
+      "1": "Torta nuziale a tre piani con fiori",
+      "2": "Torta a piani per i 18 anni con rose",
+      "3": "Torta a due piani con decoro marmorizzato",
+      "4": "Torta elegante con rose bianche",
+      "5": "Torta di Bambi con farfalle",
+      "6": "Torta con mongolfiera per un battesimo"
+    },
+    "ctaLead": "Per ordinare la tua torta"
+  },
+  "recensioni": {
+    "title": "Dicono di noi",
+    "lead": "Alcune recensioni dei nostri clienti su Google.",
+    "ratingLabel": "{{rating}} su 5 · {{count}} recensioni su Google",
+    "stars": "{{count}} stelle su 5",
+    "readMore": "Leggi tutte su Google"
   },
   "doveSiamo": {
     "title": "Dove siamo",
@@ -132,13 +137,9 @@
   },
   "contatti": {
     "title": "Contatti",
-    "lead": "Chiamaci, scrivici su WhatsApp o seguici sui social.",
+    "lead": "Chiamaci, scrivici un'email o seguici sui social.",
     "phone": {
       "label": "Telefono"
-    },
-    "whatsapp": {
-      "label": "WhatsApp",
-      "value": "Scrivici un messaggio"
     },
     "email": {
       "label": "Email"

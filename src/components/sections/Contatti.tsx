@@ -3,16 +3,14 @@ import { useTranslation } from 'react-i18next'
 import { Section } from '../layout/Section.tsx'
 
 type ContactCard = {
-  id: 'phone' | 'whatsapp' | 'email' | 'instagram' | 'facebook'
+  id: 'phone' | 'email' | 'instagram' | 'facebook'
   labelKey:
     | 'contatti.phone.label'
-    | 'contatti.whatsapp.label'
     | 'contatti.email.label'
     | 'contatti.instagram.label'
     | 'contatti.facebook.label'
   valueKey:
     | 'business.phone'
-    | 'contatti.whatsapp.value'
     | 'business.email'
     | 'business.instagram'
     | 'business.facebook'
@@ -27,13 +25,6 @@ const cards: readonly ContactCard[] = [
     valueKey: 'business.phone',
     href: 'tel:0985272108',
     external: false,
-  },
-  {
-    id: 'whatsapp',
-    labelKey: 'contatti.whatsapp.label',
-    valueKey: 'contatti.whatsapp.value',
-    href: 'https://wa.me/390985272108',
-    external: true,
   },
   {
     id: 'email',
@@ -86,15 +77,6 @@ function EmailIcon() {
   )
 }
 
-function WhatsAppIcon() {
-  return (
-    <svg {...iconProps}>
-      <path d="M12 4.5a7.5 7.5 0 0 0-6.5 11.2L4.5 19.5l3.9-1A7.5 7.5 0 1 0 12 4.5z" />
-      <path d="M9.2 9.6c.2-.4.4-.4.7-.4h.5c.2 0 .4 0 .5.4.2.5.6 1.6.6 1.7.1.2 0 .4-.1.5l-.3.4c-.1.1-.2.3 0 .5.2.4.8 1.3 1.7 1.8.7.3 1 .3 1.2.2.2-.1.6-.6.8-.8.1-.2.3-.1.5-.1h.5c.3.1.6.3.6.6.1.4-.2 1.6-1.1 2.1-.8.5-1.9.4-3.2-.2-1.6-.7-2.9-2.2-3.4-2.8-.6-.7-1.2-1.8-.9-2.7.1-.4.6-1.3 1.4-1.6z" />
-    </svg>
-  )
-}
-
 function InstagramIcon() {
   return (
     <svg {...iconProps}>
@@ -115,7 +97,6 @@ function FacebookIcon() {
 
 const icons: Record<ContactCard['id'], () => ReactNode> = {
   phone: PhoneIcon,
-  whatsapp: WhatsAppIcon,
   email: EmailIcon,
   instagram: InstagramIcon,
   facebook: FacebookIcon,
@@ -131,15 +112,11 @@ export function Contatti() {
         <p className="mt-6 text-18 leading-relaxed text-muted">{t('contatti.lead')}</p>
       </header>
 
-      {/* 6-column grid: first row 3 cards (span 2), second row 2 cards (span 3). */}
-      <ul className="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-6 lg:gap-6">
-        {cards.map((card, index) => {
+      <ul className="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4 lg:gap-6">
+        {cards.map((card) => {
           const Icon = icons[card.id]
-          // lg: 3 cards (span 2) then 2 cards (span 3); sm: last card spans both columns.
-          const span =
-            index < 3 ? 'lg:col-span-2' : index === cards.length - 1 ? 'sm:col-span-2 lg:col-span-3' : 'lg:col-span-3'
           return (
-            <li key={card.id} className={span}>
+            <li key={card.id}>
               <a
                 href={card.href}
                 {...(card.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
@@ -151,7 +128,7 @@ export function Contatti() {
                 <span className="mt-5 text-14 uppercase tracking-[0.08em] text-muted">
                   {t(card.labelKey)}
                 </span>
-                <span className="mt-2 break-all font-serif text-18 text-espresso">
+                <span className="mt-2 break-words font-serif text-18 text-espresso [overflow-wrap:anywhere]">
                   {t(card.valueKey)}
                 </span>
               </a>

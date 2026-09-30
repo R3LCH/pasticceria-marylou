@@ -11,7 +11,8 @@
     "doveSiamo": "Find us",
     "contatti": "Contact",
     "menu": "Menu",
-    "close": "Close"
+    "close": "Close",
+    "recensioni": "Reviews"
   },
   "language": {
     "label": "Language",
@@ -32,8 +33,6 @@
     "facebookUrl": "https://www.facebook.com/pasticceriamarylouscalea/",
     "mapsUrl": "https://maps.app.goo.gl/JzZekZSvMkiQJ5xK9",
     "mapsLabel": "Open in Google Maps",
-    "whatsapp": "WhatsApp",
-    "whatsappHref": "https://wa.me/390985272108",
     "email": "marylouscalea@gmail.com",
     "emailHref": "mailto:marylouscalea@gmail.com"
   },
@@ -42,9 +41,9 @@
     "title": "Mary Lou Pastry Shop",
     "subtitle": "Pastry shop, café and sweets made with care every day.",
     "cta": {
-      "call": "Call us",
-      "whatsapp": "WhatsApp"
-    }
+      "call": "Call us"
+    },
+    "logoAlt": "Mary Lou Cakes logo"
   },
   "chiSiamo": {
     "eyebrow": "Pastry shop · Café · Bar",
@@ -61,13 +60,13 @@
   },
   "dolci": {
     "title": "Our Pastries",
-    "subtitle": "Croissants, small pastries and sweets from our Scalea workshop.",
+    "subtitle": "Small pastries, cannoli and sweets from our Scalea workshop.",
     "photos": {
-      "1": "Two-tone croissant",
+      "1": "Pesche dolci (sweet peaches)",
       "2": "Chantilly cream puffs",
       "3": "Pistachio tartlets",
       "4": "Fresh fruit tartlets",
-      "5": "Chocolate hearts and custard cubes",
+      "5": "Sicilian cannoli",
       "6": "Glazed cream puffs with cherries",
       "7": "Pistachio slices",
       "8": "Fig tartlets"
@@ -75,12 +74,12 @@
   },
   "produzioneFresca": {
     "title": "Fresh every day",
-    "description": "Croissants, brioches and pastries made fresh every day in our Scalea workshop.",
+    "description": "Breakfast starts with our croissants and brioches, made fresh every day in our Scalea workshop.",
     "photos": {
       "1": "Pistachio croissant",
       "2": "Brioche with custard and amarena cherries",
       "3": "Custard croissant",
-      "4": "Sugared twists",
+      "4": "Two-tone croissant",
       "5": "Cream brioche",
       "6": "Cocoa croissants"
     }
@@ -94,17 +93,23 @@
       "Anniversaries",
       "Special events"
     ],
-    "cta": "Order on WhatsApp",
-    "orCall": "or call us",
-    "whatsappMessage": "Hi! I would like to order a cake for...",
+    "cta": "Call us",
     "photos": {
-      "1": "18th birthday drip cake with meringues",
-      "2": "Birthday sheet cake with blue lettering",
-      "3": "Celebration cake with a chocolate rose",
-      "4": "Chocolate heart cake",
-      "5": "Red velvet cake with cherries",
-      "6": "Mimosa cake"
-    }
+      "1": "Three-tier wedding cake with flowers",
+      "2": "Tiered 18th birthday cake with roses",
+      "3": "Two-tier cake with marbled finish",
+      "4": "Elegant cake with white roses",
+      "5": "Bambi cake with butterflies",
+      "6": "Hot-air balloon christening cake"
+    },
+    "ctaLead": "To order your cake"
+  },
+  "recensioni": {
+    "title": "What people say",
+    "lead": "A few reviews from our customers on Google.",
+    "ratingLabel": "{{rating}} out of 5 · {{count}} Google reviews",
+    "stars": "{{count}} out of 5 stars",
+    "readMore": "Read all on Google"
   },
   "doveSiamo": {
     "title": "Find us",
@@ -132,13 +137,9 @@
   },
   "contatti": {
     "title": "Contact",
-    "lead": "Give us a call, send us a WhatsApp message or follow us on social media.",
+    "lead": "Give us a call, send us an email or follow us on social media.",
     "phone": {
       "label": "Phone"
-    },
-    "whatsapp": {
-      "label": "WhatsApp",
-      "value": "Send us a message"
     },
     "email": {
       "label": "Email"
