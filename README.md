@@ -36,6 +36,11 @@ In the repository settings, set **Pages → Source** to **GitHub Actions**.
 
 `public/CNAME` is a placeholder (`pasticceriamarylou.it`) for a future custom domain. Remove or replace it before the first deploy if that domain is not configured, otherwise GitHub Pages will look for it.
 
+The favicon uses the existing Mary Lou logo in cream on a black square.
+`public/favicon.png` is linked through Vite's `%BASE_URL%` so it works both
+under GitHub Pages' subpath and at the IONOS domain root; `favicon.ico` is
+provided for browsers that request it by convention.
+
 ## IONOS managed webspace
 
 The client's hosting account uses SFTP/SSH host
