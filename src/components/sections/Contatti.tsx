@@ -44,7 +44,7 @@ const cards: readonly ContactCard[] = [
     id: 'facebook',
     labelKey: 'contatti.facebook.label',
     valueKey: 'business.facebook',
-    href: 'https://www.facebook.com/pasticceriamarylouscalea/',
+    href: 'https://www.facebook.com/mary.lou.372',
     external: true,
   },
 ]
